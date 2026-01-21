@@ -1,0 +1,51 @@
+# CONVERTLY Walkthrough
+
+CONVERTLY is a conversion-focused website platform built with **React**, **Express**, and **MySQL**. It features a premium "Cream Style" design and a dedicated admin dashboard for lead management.
+
+## Key Features
+
+### 1. Conversion-Focused Home Page
+A strategic layout designed to turn visitors into leads. Includes dynamic hero sections, trust signals, and problem-solution mappings.
+
+### 2. Premium Design System
+Custom CSS implemented over **Bootstrap 5** to achieve a high-end, creamy aesthetic with micro-animations and hover effects.
+
+### 3. Lead Capture & Tracking
+A fully functional contact system that saves leads directly to a **MySQL** database and displays them in a real-time **Admin Dashboard**.
+
+### 4. Admin Dashboard
+A dedicated portal for business owners to view stats, track conversion rates, and manage incoming leads with status updates.
+
+## Technical Implementation
+
+### Frontend (React + Vite)
+- **Bootstrap 5**: Grid and layout foundation.
+- **Lucide-React**: Modern icon set for UI clarity.
+- **Axios**: API communication with the backend.
+- **React Router**: SPA navigation experience.
+
+### Backend (Express + MySQL)
+- **Express JS**: RESTful API for lead management.
+- **MySQL2**: Relational database for structured lead storage.
+- **Helmet & Morgan**: Security and logging middlewares.
+
+## How to Run
+
+### Setup Database
+1. Create a database named `convertly_db` in your MySQL server.
+2. Update [.env](file:///C:/Users/HP/Desktop/CONVERTLY/server/.env) in `server/` with your credentials.
+
+### Start Backend
+```bash
+cd server
+npm run dev (or node index.js)
+```
+
+### Start Frontend
+```bash
+cd client
+npm run dev
+```
+
+Visit `http://localhost:5173` to see the site.
+Visit `/admin` to see the dashboard.

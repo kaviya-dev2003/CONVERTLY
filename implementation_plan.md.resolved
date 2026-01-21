@@ -1,0 +1,44 @@
+# Implementation Plan - CONVERTLY
+
+Build a premium, conversion-focused website platform with a light creamy aesthetic.
+
+## Proposed Changes
+
+### Backend (Express + MySQL)
+- **Database Schema**:
+  - `users`: id, name, email, password, role (admin, staff)
+  - `leads`: id, name, email, business_type, message, status (new, contacted, closed), created_at
+- **Routes**:
+  - `POST /api/auth/login`: Authentication
+  - `POST /api/leads`: Create a new lead from contact form
+  - `GET /api/admin/leads`: List all leads (Auth required)
+  - `GET /api/admin/stats`: Summary stats for dashboard
+
+### Frontend (React + Bootstrap 5)
+- **Design System**: Custom CSS for "Premium Cream Style".
+  - Background: `#FAF9F6`
+  - Accent: `#4F46E5`
+- **Component Library**:
+  - Layout: Navbar, Footer
+  - UI: Premium Cards, Buttons with micro-interactions, Forms with focus states.
+- **Pages**:
+  - `Home`: Sections for Hero, Trust, Problem/Solution, etc.
+  - `Services`: Visual grid of services.
+  - `Case Studies`: Metric-driven client stories.
+  - `Contact`: Minimal lead capture form.
+  - `Dashboard`: Admin/Staff portal for lead tracking.
+
+## Technical Details
+- **Auth**: JWT stored in cookies or localStorage.
+- **Styling**: Bootstrap 5 for grid/layout + Scoped CSS for premium visuals.
+- **Icons**: React Icons (Lucide or Heroicons style).
+
+## Verification Plan
+### Automated Tests
+- Simple endpoint testing using `curl` or `postman` logic.
+- React component rendering checks.
+
+### Manual Verification
+- Test lead submission in the contact form.
+- Verify dashboard updates stats in real-time.
+- Check mobile responsiveness on various viewport sizes.

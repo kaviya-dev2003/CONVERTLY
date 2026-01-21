@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap');
+
+:root {
+  --bg-cream: #FAF9F6;
+  --surface-white: #FFFFFF;
+  --accent-indigo: #4F46E5;
+  --text-primary: #111827;
+  --text-muted: #6B7280;
+  --border-light: #E5E7EB;
+  --success: #16A34A;
+}
+
+body {
+  background-color: var(--bg-cream);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+}
+
+h1, h2, h3, h4, .font-poppins {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.premium-card {
+  background: var(--surface-white);
+  border: 1px solid var(--border-light);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.premium-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.btn-premium {
+  background-color: var(--accent-indigo);
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-premium:hover {
+  background-color: #4338CA;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.btn-premium-outline {
+  background: transparent;
+  color: var(--accent-indigo);
+  border: 2px solid var(--accent-indigo);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-premium-outline:hover {
+  background: var(--accent-indigo);
+  color: white;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 48px 0;
+  }
+}
+
+.navbar {
+  background: rgba(250, 249, 246, 0.8) !important;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.nav-link {
+  color: var(--text-primary) !important;
+  font-weight: 500;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #111827 0%, #4F46E5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lead-form input, .lead-form textarea, .lead-form select {
+  border: 1px solid var(--border-light);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  background: var(--bg-cream);
+}
+
+.lead-form input:focus, .lead-form textarea:focus {
+  border-color: var(--accent-indigo);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  outline: none;
+}
